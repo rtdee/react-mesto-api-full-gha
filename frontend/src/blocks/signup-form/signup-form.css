@@ -1,0 +1,13 @@
+.signup-form {
+  align-self: center;
+  width: 430px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .signup-form {
+    width: 282px;
+  }
+}

@@ -1,0 +1,12 @@
+.link_location_header {
+  align-self: flex-start;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 6px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .link_location_header {
+    margin-right: 20px;
+  }
+}
