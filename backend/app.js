@@ -36,15 +36,14 @@ app.get('/crash-test', () => {
 
 app.post('/signin', login);
 app.post('/signup', createUser);
+app.get('/', (req, res) => {
+  res.send(req.query);
+});
 
 app.use(auth);
 
 app.use('/', require('./routes/user'));
 app.use('/', require('./routes/card'));
-
-app.get('/', (req, res) => {
-  res.send(req.query);
-});
 
 app.all('*', (_req, _res, next) => {
   next(new NotFoundError('Не существует'));
