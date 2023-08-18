@@ -99,8 +99,7 @@ class Api {
 export const api = new Api({
   baseUrl: 'https://rtdback.nomoreparties.co',
   headers: {
-    'Access-Control-Request-Headers': '*',
-    'Access-Control-Request-Method': '*',
+    'Access-Control-Allow-Origin': '*',
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }

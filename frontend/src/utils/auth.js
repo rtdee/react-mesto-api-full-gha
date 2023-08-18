@@ -28,8 +28,7 @@ export const checkToken = (token) => {
   return request(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {
-      'Access-Control-Request-Headers': '*',
-      'Access-Control-Request-Method': '*',
+      'Access-Control-Allow-Origin': '*',
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
