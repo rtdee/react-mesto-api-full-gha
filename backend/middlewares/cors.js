@@ -2,7 +2,7 @@ const allowedCors = [
   'https://rtdfront.nomoreparties.co',
   'http://rtdfront.nomoreparties.co',
   'localhost:3000',
-  'https://rtdback.nomoreparties.co',
+  'http://rtdback.nomoreparties.co',
   'https://rtdback.nomoreparties.co',
 ];
 
