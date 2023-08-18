@@ -1,6 +1,6 @@
 import { request } from './request.js';
 
-export const BASE_URL = 'rtdback.nomoreparties.co';
+export const BASE_URL = 'https://rtdback.nomoreparties.co';
 
 export const register = ({email, password}) => {
   return request(`${BASE_URL}/signup`, {
@@ -28,6 +28,8 @@ export const checkToken = (token) => {
   return request(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {
+      'Access-Control-Request-Headers': '*',
+      'Access-Control-Request-Method': '*',
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`,
