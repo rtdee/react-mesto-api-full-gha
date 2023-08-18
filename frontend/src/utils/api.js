@@ -97,7 +97,7 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://127.0.0.1:5000',
+  baseUrl: 'https://rtdback.nomoreparties.co',
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
