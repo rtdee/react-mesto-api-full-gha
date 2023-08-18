@@ -39,15 +39,13 @@ app.post('/signup', createUser);
 app.get('/', (req, res) => {
   res.send(req.query);
 });
-
+app.all('*', (_req, _res, next) => {
+  next(new NotFoundError('Не существует'));
+});
 app.use(auth);
 
 app.use('/', require('./routes/user'));
 app.use('/', require('./routes/card'));
-
-app.all('*', (_req, _res, next) => {
-  next(new NotFoundError('Не существует'));
-});
 
 app.use(errorLogger);
 app.use(errors());
