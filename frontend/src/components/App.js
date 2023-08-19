@@ -158,6 +158,7 @@ function App() {
         })
         .catch((err) => {
           alert(`postNewCard ERROR: ${err}`)
+          console.log('postnewcard'+ data + JSON.stringify(data))
         })
     }
 
