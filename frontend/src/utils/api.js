@@ -8,7 +8,6 @@ class Api {
 
   getInitialCards(token) {
     return request(`${this.baseUrl}/cards`, {
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -19,7 +18,6 @@ class Api {
   postNewCard(data, token) {
     return request(`${this.baseUrl}/cards`, {
       method: 'POST',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -34,7 +32,6 @@ class Api {
   deleteCard(cardId, token) {
     return request(`${this.baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -44,7 +41,6 @@ class Api {
 
   getUserInfo(token) {
     return request(`${this.baseUrl}/users/me`, {
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -55,7 +51,6 @@ class Api {
   patchUserInfo(data, token) {
     return request(`${this.baseUrl}/users/me`, {
       method: 'PATCH',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -70,7 +65,6 @@ class Api {
   putLike(cardId, token) {
     return request(`${this.baseUrl}/cards/${cardId}/likes`, {
       method: 'PUT',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -81,7 +75,6 @@ class Api {
   deleteLike(cardId, token) {
     return request(`${this.baseUrl}/cards/${cardId}/likes`, {
       method: 'DELETE',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
@@ -92,7 +85,6 @@ class Api {
   patchAvatar(data, token) {
     return request(`${this.baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      credentials: 'include',
       headers: {
         ...this.headers,
         'Authorization': `Bearer ${token}`,
