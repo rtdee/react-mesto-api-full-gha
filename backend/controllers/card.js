@@ -16,8 +16,6 @@ module.exports.postCard = (req, res, next) => {
 
   Card.create({ name, link, owner: req.user._id })
     .then((card) => {
-      // eslint-disable-next-line no-console
-      console.log(card);
       if (!card) {
         throw new BadRequestError('Введены некорректные данные');
       }
