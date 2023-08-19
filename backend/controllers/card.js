@@ -21,7 +21,8 @@ module.exports.postCard = (req, res, next) => {
       if (!card) {
         throw new BadRequestError('Введены некорректные данные');
       }
-      res.status(201).send(card);
+      console.log(res + JSON.stringify(res) + "postcardbacke")
+      //res.status(201).send(card);
     })
     .catch(next);
 };
