@@ -28,7 +28,7 @@ export const checkToken = (token) => {
   return request(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {
-      'Access-Control-Allow-Origin': 'origin',
+      'Access-Control-Allow-Origin': 'https://rtdback.nomoreparties.co',
       'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token,  Accept, Authorization, X-Requested-With',
       'Accept': 'application/json',
