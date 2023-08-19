@@ -150,8 +150,7 @@ function App() {
     function handleAddPlaceSubmit(data) {
       const token = localStorage.getItem('token');
       console.log("handle" + JSON.stringify(data))
-      const newdata = JSON.stringify(data)
-      api.postNewCard(newdata, token)
+      api.postNewCard(data, token)
         .then((newCard) => {
           console.log('postnewcard'+ newCard)
           setCards([newCard, ...cards]);

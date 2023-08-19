@@ -16,6 +16,7 @@ class Api {
   }
 
   postNewCard(data, token) {
+    console.log('postnewcardapi' + data + JSON.stringify(data))
     return request(`${this.baseUrl}/cards`, {
       method: 'POST',
       headers: {
@@ -26,7 +27,7 @@ class Api {
         name: data.name,
         link: data.link
       })
-    }).then(() => console.log(data + 'postnewcard'))
+    })
   }
 
   deleteCard(cardId, token) {
