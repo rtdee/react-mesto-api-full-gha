@@ -26,7 +26,7 @@ class Api {
         name: data.name,
         link: data.link
       })
-    }).then(() => console.log(data))
+    }).then(() => console.log(data + 'postnewcard'))
   }
 
   deleteCard(cardId, token) {
