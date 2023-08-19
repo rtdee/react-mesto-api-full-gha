@@ -26,7 +26,7 @@ class Api {
         name: data.name,
         link: data.link
       })
-    })
+    }).then(() => console.log(data))
   }
 
   deleteCard(cardId, token) {
@@ -101,7 +101,7 @@ export const api = new Api({
   headers: {
     'Access-Control-Allow-Origin': 'https://rtdback.nomoreparties.co',
     'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token,  Accept, Authorization, X-Requested-With',
+    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token, Accept, Authorization, X-Requested-With',
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   }

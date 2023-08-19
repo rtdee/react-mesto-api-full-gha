@@ -25,6 +25,7 @@ export default function AddPlacePopup(props) {
       name,
       link
     });
+    console.log(name, link)
   }
 
   return (
