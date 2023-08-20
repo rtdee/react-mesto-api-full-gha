@@ -10,14 +10,14 @@ const { createUser } = require('./controllers/user');
 const { login } = require('./controllers/login');
 const NotFoundError = require('./errors/not-found');
 const auth = require('./middlewares/auth');
-const corsmw = require('./middlewares/cors');
+// const corsmw = require('./middlewares/cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { PORT = 5001, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 const app = express();
 
-app.use(corsmw());
+// app.use(corsmw());
 app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
@@ -39,6 +39,7 @@ app.post('/signup', createUser);
 app.get('/', (req, res) => {
   res.send(req.query);
 });
+
 app.use(auth);
 
 app.use('/', require('./routes/user'));
