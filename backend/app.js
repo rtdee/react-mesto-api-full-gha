@@ -18,7 +18,7 @@ const { PORT = 5001, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.en
 const app = express();
 // app.use(corsmw());
 
-// app.use(cors());
+app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
