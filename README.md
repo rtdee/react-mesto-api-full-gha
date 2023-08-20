@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.14.162
+IP-адрес 84.201.177.220
 
 Frontend https://rtdfront.nomoreparties.co
 

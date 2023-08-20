@@ -5,12 +5,13 @@ const allowedCors = [
   'localhost:5000',
   'http://rtdback.nomoreparties.co',
   'https://rtdback.nomoreparties.co',
-  '158.160.14.162',
+  '84.201.177.220',
 ];
 
 // eslint-disable-next-line consistent-return
 module.exports = (req, res, next) => {
-  const { origin } = req.headers;
+  const { headers } = req;
+  const { origin } = headers;
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
   }
