@@ -16,13 +16,13 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { PORT = 5000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 const app = express();
+app.use(corsmw());
 
 app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use('/', corsmw());
 
 mongoose.connect(DB_URL);
 
