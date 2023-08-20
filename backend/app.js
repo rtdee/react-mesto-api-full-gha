@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
-const cors = require('cors');
+// const cors = require('cors');
 const { createUser } = require('./controllers/user');
 const { login } = require('./controllers/login');
 const NotFoundError = require('./errors/not-found');
@@ -17,12 +17,12 @@ const { PORT = 5000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.en
 
 const app = express();
 
-app.use(cors());
-app.use(corsmw());
+// app.use(cors());
 app.use(helmet());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(corsmw());
 
 mongoose.connect(DB_URL);
 
