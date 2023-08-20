@@ -152,7 +152,7 @@ function App() {
       console.log("handle" + JSON.stringify(data))
       api.postNewCard(data, token)
         .then((newCard) => {
-          console.log('postnewcard'+ newCard)
+          console.log('postnewcard'+ JSON.stringify(newCard))
           setCards([newCard, ...cards]);
           closeAllPopups();
         })
